@@ -1,0 +1,31 @@
+name: link
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  link:
+    runs-on: ubuntu-latest
+    #environment: production
+
+    steps:
+      - name: github app auth
+        uses: actions/create-github-app-token@0d564482f06ca65fa9e77e2510873638c82206f2 # pin@v1.11.5
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_ID }} # The ID of the GitHub App
+          private-key: ${{ secrets.PRIVATE_KEY }} # The private key of the GitHub App
+
+      - uses: nobe4/action-ln@0.0.9
+        with:
+          config-path: config.yml
+          token: ${{ steps.app-token.outputs.token }}
