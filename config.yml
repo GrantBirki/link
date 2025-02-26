@@ -2,6 +2,8 @@ links:
   - from:
       repo: grantbirki/ruby-template
       path: script/bootstrap
+      ref: main
     to:
       repo: grantbirki/ldap-api
       path: script/bootstrap
+      ref: main
