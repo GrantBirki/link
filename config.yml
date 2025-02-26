@@ -5,3 +5,9 @@ links:
     to:
       repo: grantbirki/ldap-api
       path: script/bootstrap
+  - from:
+      repo: grantbirki/ruby-template
+      path: .github/CODEOWNERS
+    to:
+      repo: grantbirki/ldap-api
+      path: .github/CODEOWNERS
