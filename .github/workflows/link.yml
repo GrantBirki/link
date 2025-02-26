@@ -15,7 +15,7 @@ concurrency:
 jobs:
   link:
     runs-on: ubuntu-latest
-    #environment: production
+    environment: production
 
     steps:
       - name: github app auth
