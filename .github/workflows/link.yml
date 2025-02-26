@@ -26,7 +26,7 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }} # The private key of the GitHub App
           owner: ${{ github.repository_owner }} # allow the GitHub App to access all repos under the owner's current installation
 
-      - uses: nobe4/action-ln@0.0.9
+      - uses: nobe4/action-ln@4edd3000b63f9c81d7b0ba5507fb68dd259535b6 # pin@v0.0.10
         with:
           config-path: config.yml
           token: ${{ steps.app-token.outputs.token }}
