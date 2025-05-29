@@ -11,3 +11,9 @@ links:
     to:
       repo: grantbirki/ldap-api
       path: .github/CODEOWNERS
+  - from:
+      repo: grantbirki/ruby-template
+      path: .github/copilot-instructions.md
+    to:
+      repo: grantbirki/ldap-api
+      path: .github/copilot-instructions.md
