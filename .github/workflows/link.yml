@@ -28,5 +28,5 @@ jobs:
 
       - uses: nobe4/action-ln@1034b02099495ac7f0bde23e3cb15bf52e41c74f # pin@v0.0.19
         with:
-          config-path: config.yml
+          config: config.yml
           token: ${{ steps.app-token.outputs.token }}
